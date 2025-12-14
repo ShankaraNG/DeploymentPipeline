@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="home-container">
+    {% if scheduled_text %}
+    <div class="top-ticker">
+        <div class="ticker-text">{{ scheduled_text }}</div>
+    </div>
+    {% endif %}
+
+    <div class="home-box">
+        <h2>Welcome to Deployment Pipeline</h2>
+        <p>Use the buttons below to start a pipeline or view pipeline runs.</p>
+
+        <div class="tiles">
+            <a href="{{ url_for('start_pipeline') }}" class="tile">Start a Pipeline</a>
+            <a href="{{ url_for('pipeline_runs') }}" class="tile">Pipeline Runs</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

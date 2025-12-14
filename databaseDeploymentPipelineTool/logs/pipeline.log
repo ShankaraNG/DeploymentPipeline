@@ -1,0 +1,44 @@
+14 June 2025 18:28:45,509 INFO [GITCLONE] 200 Cleaning up existing directory
+14 June 2025 18:29:52,191 INFO [GITCLONE] 200 checking out the target branch main
+14 June 2025 18:30:01,219 INFO [GITCLONE] 200 pulling the latest changes
+14 June 2025 18:30:09,556 INFO [GITCLONE] 200 Git cloning process completed successfully
+14 June 2025 18:32:15,276 INFO [GITCLONE] 200 Cleaning up existing directory
+14 June 2025 18:32:16,002 INFO [GITCLONE] 200 Cleaning up completed successfully
+14 June 2025 18:32:44,177 INFO [GITCLONE] 200 checking out the target branch main
+14 June 2025 18:32:53,711 INFO [GITCLONE] 200 pulling the latest changes
+14 June 2025 18:33:02,795 INFO [GITCLONE] 200 Git cloning process completed successfully
+16 June 2025 07:37:31,546 INFO [GITCLONE] 200 Cleaning up existing directory
+16 June 2025 07:37:32,781 ERROR [GITCLONE] 500 [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\shankara.nanjangudga\\Desktop\\pythonscript\\DBpipeline\\workingdirectory\\gitclonerepo'
+16 June 2025 07:38:12,551 INFO [GITCLONE] 200 Cleaning up existing directory
+16 June 2025 07:38:12,557 ERROR [GITCLONE] 500 C:\Users\shankara.nanjangudga\Desktop\pythonscript\DBpipelinetool\workingdirectory\gitclonerepo is not a Git repository
+16 June 2025 07:38:12,581 INFO [GITCLONE] 200 Cleaning up completed successfully
+19 June 2025 19:48:12,908 INFO [SQLEXECUTOR] 200 Executing SQL script: C:\Users\shankara.nanjangudga\Downloads\New.sql
+19 June 2025 19:48:20,962 INFO [SQLEXECUTOR] 200 SQL script New.sql executed successfully
+19 June 2025 19:50:03,267 INFO [SQLEXECUTOR] 200 Executing SQL script: C:\Users\shankara.nanjangudga\Downloads\Rollback.sql
+19 June 2025 19:50:10,115 INFO [SQLEXECUTOR] 200 SQL script Rollback.sql executed successfully
+25 June 2025 08:03:59,883 INFO [FILEMOVE] 200 File shankar.txt moved successfully to C:\Users\shankara.nanjangudga\Desktop\databsescripts\New_Location
+25 June 2025 12:39:08,633 INFO [GITCLONE] 200 Cleaning up existing directory
+25 June 2025 12:39:08,637 ERROR [GITCLONE] 500 C:\Users\shankara.nanjangudga\Desktop\pythonscript\DBpipelinetool\workingdirectory\gitclonerepo is not a Git repository
+25 June 2025 12:39:08,648 INFO [GITCLONE] 200 Cleaning up completed successfully
+25 June 2025 12:39:34,771 INFO [GITCLONE] 200 cloning the respository https://gitlab.com/shankarng/shankarNGcode
+25 June 2025 12:39:54,302 INFO [GITCLONE] 200 checking out the target branch main
+25 June 2025 12:40:12,417 INFO [GITCLONE] 200 pulling the latest changes
+25 June 2025 12:40:24,733 INFO [GITCLONE] 200 Git cloning process completed successfully
+25 June 2025 12:42:58,283 INFO [FILEMOVE] 200 File shankar.txt moved successfully to C:\Users\shankara.nanjangudga\Desktop\databsescripts\New_Location
+25 June 2025 12:44:25,931 INFO [SQLEXECUTOR] 200 Executing SQL script: C:\Users\shankara.nanjangudga\Desktop\databsescripts\Rollback.sql
+25 June 2025 12:44:32,013 ERROR [SQLEXECUTOR] 600 SQL*Plus failed with exit code 942
+DROP VIEW EMP_DEPT_VIEW
+*
+ERROR at line 1:
+ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+
+
+
+
+25 June 2025 12:44:48,029 INFO [SQLEXECUTOR] 200 Executing SQL script: C:\Users\shankara.nanjangudga\Desktop\databsescripts\New.sql
+25 June 2025 12:44:56,039 INFO [SQLEXECUTOR] 200 SQL script New.sql executed successfully
+25 June 2025 12:45:47,678 INFO [SQLEXECUTOR] 200 Executing SQL script: C:\Users\shankara.nanjangudga\Desktop\databsescripts\Rollback.sql
+25 June 2025 12:45:54,171 INFO [SQLEXECUTOR] 200 SQL script Rollback.sql executed successfully
+25 June 2025 12:51:20,962 INFO [GITCLONE] 200 Cleaning up existing directory
+25 June 2025 12:51:21,922 INFO [GITCLONE] 200 Cleaning up completed successfully

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="about-container">
+    <div class="about-box">
+        <h2>About This Application</h2>
+        <div class="about-content">
+            <p>
+                This Deployment Pipeline Dashboard is a intuitive interface designed and 
+                developed by <strong>Shankara N G</strong> that allows teams to trigger, monitor, and manage
+                automated deployments with respect to databases.
+            </p>
+            <p>
+                It integrates with Git repositories to pull source code, build and deploy
+                applications, and track the status of each pipeline stage in real-time.
+                This Pipeline performs the following functions
+                1. It can either run as a scheduled batch on the background or a manual trigger
+                2. It will Either do a roll back of the previous deployment or deploy a new code
+            </p>
+            <p>
+                Incase you choose deployment process
+                1. In the case you are deploying a new code it will first take the back up of all the files
+                2. It will check and create directories if required
+                3. It will place the code files for the ETLS in the particular directories
+                4. It will push all the sql scripts to it place and run the code
+            </p>
+            <p>
+                Incase you choose backout process
+                1. In check for the back up files which is given in the folder
+                2. It will check and create directories if required
+                3. It will replace the code files for the ETLS in the particular directories with 
+                old ones taken from backup
+                4. It will push all the roll back sql scripts to it place and run the code and this is pulled from git
+            </p>
+            <p>
+                The system is designed for simplicity and visibility providing engineers
+                with a streamlined experience to initiate new deployments, monitor
+                progress, and review logs from past runs.
+            </p>
+            <p>
+                Technologies used include Flask, Python, Pandas, File Reader, Oracle SQL Client and
+                for backend routing, HTML/CSS for frontend design, and a combination of CI/CD scripting tools to perform
+                deployment operations on configured servers.
+            </p>
+            <p>
+                The goal of this dashboard is to improve deployment efficiency,
+                consistency, and transparency within development teams.
+            </p>
+            <p>
+                This Tool is designed by <strong>Shankara N G</strong>
+                Please contact him at <strong>shankarnarayana92@gmail.com</strong> for more info regarding the same
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

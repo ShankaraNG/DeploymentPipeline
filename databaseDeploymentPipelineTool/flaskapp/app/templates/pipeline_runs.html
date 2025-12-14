@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="pipeline-runs-container">
+    <div class="pipeline-runs-box">
+        <h2>Pipeline Runs</h2>
+        <button onclick="window.location.reload()" class="refresh-btn">Refresh</button>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>No</th><th>Start Time</th><th>Last Updated</th><th>Git URL</th>
+                    <th>Branch</th><th>Type</th><th>Triggered By</th><th>Stage</th>
+                    <th>Status</th><th>Logs</th>
+                </tr>
+                {% for r in runs %}
+                <tr>
+                    <td>{{ r.PipelineNo }}</td>
+                    <td>{{ r.StartTime }}</td>
+                    <td>{{ r.LastUpdatedTime }}</td>
+                    <td>{{ r.GitUrl }}</td>
+                    <td>{{ r.Branch }}</td>
+                    <td>{{ r.DeploymentType }}</td>
+                    <td>{{ r.TriggeredBy }}</td>
+                    <td>{{ r.Stage }}</td>
+                    <td>{{ r.Status }}</td>
+                    <td><a href="{{ url_for('download_log', logpath=r.LogPath) }}">Log</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

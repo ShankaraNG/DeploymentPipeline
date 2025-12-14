@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title or "Deployment Pipeline" }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="left">Deployment Pipeline</div>
+        {% if session.get('user') %}
+        <div class="right">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+        {% endif %}
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>©2025 Deployment CI/CD Pipeline Designed and Developed by <strong>Shankara N G</strong>.</p>
+    </footer>
+
+</body>
+</html>
+<!-- At the bottom of base.html, before </body> -->
+<div id="flash-messages" style="display:none;" data-messages='{{ get_flashed_messages() | tojson | safe }}'></div>
+
+<script>
+    const flashDiv = document.getElementById('flash-messages');
+    const flashMessages = JSON.parse(flashDiv.dataset.messages || '[]');
+    if(flashMessages.length > 0) {
+        alert(flashMessages[0]); // shows first flash as popup
+    }
+</script>

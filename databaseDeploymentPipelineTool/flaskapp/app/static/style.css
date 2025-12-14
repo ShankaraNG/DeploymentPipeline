@@ -1,0 +1,414 @@
+/* --- Reset default margins/padding --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Full window height --- */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    overflow: auto; /* allow scrolling */
+}
+
+/* --- Navbar (Top Bar) --- */
+.navbar {
+    background-color: #000;   
+    color: white;
+    padding: 20px 30px;       
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar links */
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer (Bottom Bar) --- */
+footer {
+    background: #000;          
+    color: white;
+    text-align: center;
+    padding: 20px 30px;        
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* --- Main content area --- */
+main {
+    margin-top: 80px; /* leave space for navbar */
+    margin-bottom: 80px; /* leave space for footer */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* top alignment by default */
+    padding: 20px;
+    
+}
+
+/* --- Login Page Centering --- */
+.login-box {
+    background: white;
+    padding: 60px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 350px;
+    margin: auto; /* center horizontally */
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.login-box button {
+    background-color: #000;  
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background-color: #333; 
+}
+
+/* --- Home Page --- */
+
+html.home-page,
+body.home-page {
+    overflow: hidden; /* prevent scrolling */
+    height: 100%;
+}
+
+body.home-page main {
+    margin: 0;           /* remove navbar/footer margin */
+    padding: 0;          /* remove extra padding */
+    height: 100%;        /* fill remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;           /* full height of main */
+}
+
+.home-box {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 400px;
+}
+
+.home-box h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.home-box p {
+    margin-bottom: 30px;
+}
+
+.tiles {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tile {
+    background-color: #222;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.25);
+    flex: 1;
+    max-width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+.tile:hover {
+    background-color: #555;
+}
+
+/* --- Pipeline Form --- */
+.pipeline-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.pipeline-box {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 400px;
+    max-width: 100%;
+}
+
+.pipeline-box h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pipeline-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.pipeline-box label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.pipeline-box input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.pipeline-box button {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.pipeline-box button:hover {
+    background-color: #333;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 480px) {
+    .login-box, .home-box, .pipeline-box {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .tiles {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* --- Pipeline Runs Container --- */
+.pipeline-runs-container {
+    display: flex;
+    justify-content: center;       /* center horizontally */
+    padding: 20px;
+    width: 100%;
+    min-height: calc(100vh - 160px); /* full height minus navbar/footer */
+    box-sizing: border-box;
+}
+
+/* --- Pipeline Runs Box --- */
+.pipeline-runs-box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;  /* center the title */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Title */
+.pipeline-runs-box h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Refresh button */
+.pipeline-runs-box .refresh-btn {
+    position: absolute; /* position relative to the box */
+    top: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 6px 12px; /* smaller size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pipeline-runs-box .refresh-btn:hover {
+    background-color: #333;
+}
+
+/* Make sure box is relative for the absolute button */
+.pipeline-runs-box {
+    position: relative;
+}
+
+/* Table container for scrolling */
+.pipeline-runs-box .table-container {
+    width: 100%;
+    overflow-x: auto; /* horizontal scroll if needed */
+}
+
+/* Table styling */
+.pipeline-runs-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pipeline-runs-box th, 
+.pipeline-runs-box td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+}
+
+.pipeline-runs-box th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Scrollable content if table is tall */
+.pipeline-runs-box .table-container {
+    max-height: 500px; /* adjust as needed */
+    overflow-y: auto;
+}
+
+
+/* --- About Page --- */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* center vertically */
+    width: 100%;
+    min-height: calc(100vh - 160px); /* full height minus navbar/footer */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-box {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 600px;
+    max-width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+.about-box h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Scrollable inner content */
+.about-content {
+    max-height: 400px; /* adjust as needed */
+    overflow-y: auto;
+    text-align: left;
+    padding-right: 10px; /* space for scrollbar */
+    line-height: 1.6;
+}
+
+/* Optional scrollbar styling (for Chrome/Edge) */
+.about-content::-webkit-scrollbar {
+    width: 8px;
+}
+.about-content::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+.about-content::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* --- Top Scrolling Ticker --- */
+.top-ticker {
+    position: absolute;
+    top: 80px; /* just below navbar (assuming navbar height is ~80px) */
+    left: 0;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px 0;
+    z-index: 100; /* above content */
+}
+
+.ticker-text {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    padding-left: 100%;
+    animation: tickerMove 15s linear infinite;
+}
+
+@keyframes tickerMove {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

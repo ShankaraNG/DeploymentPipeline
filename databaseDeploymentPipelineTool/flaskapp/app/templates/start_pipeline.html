@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="pipeline-container">
+    <div class="pipeline-box">
+        <h2>Start a New Pipeline</h2>
+
+        <!-- Store flash messages in a hidden element -->
+        <div id="flash-messages" style="display:none;" data-messages='{{ get_flashed_messages() | tojson | safe }}'></div>
+
+        <form method="POST" action="{{ url_for('run_pipeline') }}" class="pipeline-form">
+            <label>GIT URL</label>
+            <input name="git_url" required>
+
+            <label>Target Branch</label>
+            <input name="target_branch">
+
+            <label>Mode</label>
+            <input name="mode">
+
+            <label>Type</label>
+            <input name="type">
+
+            <label>Server Name</label>
+            <input name="server_name">
+
+            <label>Deploy</label>
+            <input name="deploy">
+
+            <label>Back up File Name</label>
+            <input name="backup_file">
+
+            <label>Email Distribution List</label>
+            <input name="email_list">
+
+            <button type="submit">Run</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Get the messages from the hidden div
+    const flashDiv = document.getElementById('flash-messages');
+    const flashMessages = JSON.parse(flashDiv.dataset.messages || '[]');
+
+    if(flashMessages.length > 0) {
+        alert(flashMessages[0]);  // only show the first flash message
+    }
+</script>
+
+{% endblock %}
